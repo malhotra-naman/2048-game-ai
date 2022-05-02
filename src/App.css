@@ -1,3 +1,4 @@
+@import url(fonts/clear-sans.css);
 html,
 body {
   margin: 0;
@@ -110,6 +111,7 @@ h1.title {
   float: left;
   text-align: left;
   margin-left: 10px;
+  display: flex;
 }
 
 .score-container,
@@ -255,6 +257,7 @@ hr {
   cursor: default;
   -webkit-touch-callout: none;
   -ms-touch-callout: none;
+  user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -958,9 +961,9 @@ input[type="text"].state-input {
   margin-top: 10px;
 }
 
-.state-panel {
-  /*display:none;*/
-}
+/* .state-panel {
+  display:none;
+} */
 
 .game-explanation {
   margin-top: 50px;
@@ -1032,6 +1035,7 @@ input[type="text"].state-input {
     cursor: default;
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

@@ -1,12 +1,10 @@
 import React from "react";
 
-function ControlPanel() {
+const ControlPanel = () => {
   return (
     <div className="ai-panel">
-      <button href="#" className="pause-button">
-        Pause
-      </button>
-      <div className="ai-panel-header">AI Mode:</div>
+      <a className="pause-button">Pause</a>
+      <div className="ai-panel-header">Modes:</div>
       <label title="Fancy intelligentness">
         <input
           type="radio"
@@ -69,15 +67,8 @@ function ControlPanel() {
         Evil
       </label>
       <br />
-      <div className="ai-panel-header">Highest numbers:</div>
-      <div className="stats-container"></div>
-      <div className="state-panel">
-        <button className="copy-button">Copy last 10</button>
-        <input type="text" className="state-input" />
-        <button className="load-button">Load state</button>
-      </div>
     </div>
   );
-}
+};
 
 export default ControlPanel;

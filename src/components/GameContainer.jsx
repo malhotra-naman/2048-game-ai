@@ -1,11 +1,10 @@
 import React from "react";
-import "../App.css";
 import ControlPanel from "./ControlPanel";
 import GameMessage from "./GameMessage";
 import GridContainer from "./GridContainer";
 import TileContainer from "./TileContainer";
 
-function GameContainer() {
+const GameContainer = () => {
   return (
     <div className="game-container">
       <GameMessage />
@@ -14,6 +13,6 @@ function GameContainer() {
       <ControlPanel />
     </div>
   );
-}
+};
 
 export default GameContainer;

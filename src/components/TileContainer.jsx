@@ -1,8 +1,7 @@
 import React from "react";
-import "../App.css";
 
-function TileContainer() {
+const TileContainer = () => {
   return <div className="tile-container"></div>;
-}
+};
 
 export default TileContainer;

@@ -25,7 +25,7 @@ function App() {
     "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/HTMLActuator.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/AIInputManager.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/ai_input_manager.js"
   );
   useScript(
     "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/SmartAI.js"

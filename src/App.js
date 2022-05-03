@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import GameContainer from "./components/GameContainer";
-import Heading from "./components/Heading";
+import Heading from "./components/Header/Heading";
 import useScript from "./use-script";
 
 function App() {

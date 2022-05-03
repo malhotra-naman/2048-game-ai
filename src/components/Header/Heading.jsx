@@ -1,5 +1,5 @@
 import React from "react";
-import ScoreContainer from "./ScoreContainer";
+import ScoreContainer from "../Score/ScoreContainer";
 
 const Heading = () => {
   return (

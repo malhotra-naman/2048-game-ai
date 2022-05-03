@@ -1,8 +1,7 @@
 RNGAI = function (game) {
   this.game = game;
 };
-RNGAI.prototype.nextMove = function() {
-  // Move in a random direction.
+RNGAI.prototype.nextMove = function () {
   var move;
   do {
     move = Math.floor(Math.random() * 4);
@@ -13,8 +12,7 @@ RNGAI.prototype.nextMove = function() {
 PriorityAI = function (game) {
   this.game = game;
 };
-PriorityAI.prototype.nextMove = function() {
-  // Move based on priority: up, left, right, down
+PriorityAI.prototype.nextMove = function () {
   var priority = [0, 3, 1, 2];
   var move;
   for (var i = 0; i < priority.length; i++) {
@@ -24,28 +22,23 @@ PriorityAI.prototype.nextMove = function() {
     }
   }
   return 0;
-}
+};
 
 AlgorithmAI = function (game) {
   this.game = game;
 };
 AlgorithmAI.prototype.prevMove = -1;
-AlgorithmAI.prototype.nextMove = function() {
-  // Move based on an algorithm: up, left, up, left, etc.
-  // If neither move is available then go right or down.
+AlgorithmAI.prototype.nextMove = function () {
   var move = 0;
-  if (move == this.prevMove)
-    move = 3;
-  
+  if (move == this.prevMove) move = 3;
+
   if (!this.game.moveAvailable(move)) {
-    // Revert to priority mode
     var priority = [0, 3, 1, 2];
     for (var i = 0; i < priority.length; i++) {
       move = priority[i];
-      if (this.game.moveAvailable(move))
-        break;
+      if (this.game.moveAvailable(move)) break;
     }
   }
   this.prevMove = move;
   return move;
-}
+};

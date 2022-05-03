@@ -112,6 +112,7 @@ h1.title {
   text-align: left;
   margin-left: 10px;
   display: flex;
+  flex-direction: row-reverse;
 }
 
 .score-container,
@@ -279,7 +280,7 @@ hr {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(238, 228, 218, 0.73);
+  background: rgba(238, 228, 218, 0.2435);
   z-index: 100;
   padding-top: 40px;
   text-align: center;
@@ -291,6 +292,7 @@ hr {
   animation-fill-mode: both;
 }
 .game-message p {
+  color: #040607;
   font-size: 60px;
   font-weight: bold;
   height: 60px;
@@ -314,7 +316,7 @@ hr {
 }
 .game-message a {
   display: inline-block;
-  background: #8f7a66;
+  background: #003249;
   border-radius: 3px;
   padding: 0 20px;
   text-decoration: none;
@@ -333,8 +335,8 @@ hr {
   margin-left: 10px;
 }
 .game-message.game-won {
-  background: rgba(237, 194, 46, 0.5);
-  color: #f9f6f2;
+  background: rgba(238, 228, 218, 0.2435);
+  color: #040607;
 }
 .game-message.game-won a.keep-playing-button {
   display: inline-block;
@@ -1057,7 +1059,7 @@ input[type="text"].state-input {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(238, 228, 218, 0.73);
+    background: rgba(238, 228, 218, 0.2435);
     z-index: 100;
     padding-top: 40px;
     text-align: center;
@@ -1092,7 +1094,7 @@ input[type="text"].state-input {
   }
   .game-message a {
     display: inline-block;
-    background: #8f7a66;
+    background: rgba(238, 228, 218, 0.2435);
     border-radius: 3px;
     padding: 0 20px;
     text-decoration: none;
@@ -1111,7 +1113,7 @@ input[type="text"].state-input {
     margin-left: 10px;
   }
   .game-message.game-won {
-    background: rgba(237, 194, 46, 0.5);
+    background: rgba(238, 228, 218, 0.2435);
     color: #f9f6f2;
   }
   .game-message.game-won a.keep-playing-button {

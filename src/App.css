@@ -926,7 +926,8 @@ hr {
   margin-bottom: 0;
 }
 
-.pause-button {
+.pause-button,
+.reset-button {
   display: inline-block;
   background: rgba(238, 228, 218, 0.35);
   border-radius: 3px;
@@ -939,6 +940,7 @@ hr {
   cursor: pointer;
   display: block;
   text-align: center;
+  margin: 5px;
 }
 
 .copy-button,
@@ -1022,7 +1024,8 @@ input[type="text"].state-input {
     line-height: 1.65;
   }
 
-  .pause-button {
+  .pause-button,
+  .reset-button {
     width: 42%;
     padding: 0;
     display: block;

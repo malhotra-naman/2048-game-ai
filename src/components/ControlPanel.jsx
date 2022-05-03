@@ -12,6 +12,16 @@ const ControlPanel = () => {
   return (
     <div className="ai-panel">
       <a className="pause-button">Pause</a>
+      <a
+        className="reset-button"
+        onClick={() => {
+          window.localStorage.removeItem("gameState");
+          window.localStorage.removeItem("bestScore");
+          window.location.reload();
+        }}
+      >
+        Reset
+      </a>
       <div className="ai-panel-header">Modes:</div>
       <label title="Fancy intelligentness">
         <input

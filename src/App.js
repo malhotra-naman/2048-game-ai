@@ -7,43 +7,44 @@ import useScript from "./use-script";
 
 function App() {
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/tile.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/tile.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/application.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/application.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/game_manager.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/game_manager.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/local_storage_manager.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/local_storage_manager.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/grid.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/grid.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/html_actuator.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/html_actuator.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/ai_input_manager.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/ai_input_manager.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/smart_ai.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/smart_ai.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/basic_ai.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/basic_ai.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/animframe_polyfill.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/animframe_polyfill.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/classlist_polyfill.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/classlist_polyfill.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/bind_polyfill.js"
+    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/bind_polyfill.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/jquery-1.10.2.min.js"
+    "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    // "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/jquery-1.10.2.min.js"
   );
   return (
     <div className="container">

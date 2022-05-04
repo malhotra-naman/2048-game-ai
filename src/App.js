@@ -34,17 +34,10 @@ function App() {
     "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/basic_ai.js"
   );
   useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/animframe_polyfill.js"
-  );
-  useScript(
-    "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/classlist_polyfill.js"
-  );
-  useScript(
     "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-game-ai@main/src/services/bind_polyfill.js"
   );
   useScript(
     "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"
-    // "https://cdn.jsdelivr.net/gh/malhotra-naman/2048-automation@main/js/jquery-1.10.2.min.js"
   );
   return (
     <div className="container">

@@ -7,7 +7,7 @@ const Heading = () => {
       <div className="heading">
         <h1 className="title">
           2<span style={{ color: "#c83405", whiteSpace: "nowrap" }}>0</span>48
-          Automation
+          AI
         </h1>
         <ScoreContainer />
       </div>

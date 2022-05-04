@@ -65,9 +65,6 @@ AIInputManager.prototype.listen = function () {
     this.setTileGenerator(TileGenerator.EVIL);
   });
 
-  this.bindButtonPress(".copy-button", this.copyStates);
-  this.bindButtonPress(".load-button", this.loadState);
-
   this.startAI();
 };
 
@@ -76,39 +73,6 @@ if (!Math.log2) {
     return Math.log(x) / Math.LN2;
   };
 }
-
-AIInputManager.prototype.updateStats = function () {
-  var self = this;
-  var maxValue = 0;
-  this.game.grid.eachCell(function (x, y, tile) {
-    if (tile) maxValue = Math.max(tile.value, maxValue);
-  });
-  var index = Math.round(Math.log2(maxValue));
-  while (index >= this.stats.length) {
-    this.stats.push(0);
-  }
-  this.stats[index] += 1;
-  var total = 0;
-  for (var i = 0; i < this.stats.length; i++) {
-    total += this.stats[i];
-  }
-
-  html = "";
-  for (var i = 0; i < this.stats.length; i++) {
-    var percentage = (this.stats[i] / total) * 100;
-    percentage = Math.round(percentage * 10) / 10;
-    if (this.stats[i] > 0) {
-      html += "<div class='stats-number'>" + Math.pow(2, i) + ":</div>";
-      html +=
-        "<div class='stats-value'>" +
-        this.stats[i] +
-        " (" +
-        percentage +
-        "%)</div>";
-    }
-  }
-  $(".stats-container").html(html);
-};
 
 AIInputManager.prototype.setAIMode = function (mode) {
   this.mode = mode;
@@ -155,12 +119,11 @@ AIInputManager.prototype.nextMove = function () {
   this.emit("move", move);
 
   if (this.game.over) {
-    this.updateStats();
     this.stopAI();
     setTimeout(function () {
       self.emit("restart");
       self.startAI();
-    }, 5000);
+    }, 7000);
   } else if (this.speed == AISpeed.FULL && this.runningAI) {
     setTimeout(this.nextMove.bind(this));
   }
@@ -212,21 +175,6 @@ AIInputManager.prototype.pauseOrResume = function (event) {
 AIInputManager.prototype.keepPlaying = function (event) {
   event.preventDefault();
   this.emit("keepPlaying");
-};
-
-AIInputManager.prototype.copyStates = function (event) {
-  event.preventDefault();
-  var html = "";
-  for (var i = 0; i < this.prevStates.length; i++) {
-    html += JSON.stringify(this.prevStates[i]) + "<br /><br />";
-  }
-  $(".copy-json").html(html);
-};
-AIInputManager.prototype.loadState = function (event) {
-  var stateJSON = $(".state-input").val();
-  var state = JSON.parse(stateJSON);
-  this.game.grid = new Grid(state.size, state.cells);
-  this.game.actuate();
 };
 
 AIInputManager.prototype.bindButtonPress = function (selector, fn) {
